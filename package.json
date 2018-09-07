@@ -7,7 +7,7 @@
   "description": "Eventilous - Aardvark Labs",
   "main": "index.js",
   "scripts": {
-    /* "postinstall": "bower install", */
+    "postinstall": "bower install",
     "start": "node app/app.js",
     "test": "./node_modules/.bin/mocha app/tests/**/*.js",
     "test-browser": "start chrome http://127.0.0.1:8080/app/tests/index.html && http-server ./"
