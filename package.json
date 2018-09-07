@@ -1,7 +1,10 @@
 {
   "name": "eventilous",
   "version": "1.0.0",
-  "description": "Aardvark Labs",
+  "engines": {
+    "node": "10.9.0"
+  },
+  "description": "Eventilous - Aardvark Labs",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
@@ -13,6 +16,7 @@
     "type": "git",
     "url": "https://github.com/AardvarkLabs/Eventilous.git"
   },
+
   "author": "",
   "license": "MIT",
   "dependencies": {
