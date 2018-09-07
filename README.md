@@ -1,5 +1,5 @@
 
-Eventilous - v1.00.x
+Eventilous OpenSource Project  - v1.00.x
 #
 
 The project is a Standard Web application for managing social events of all kind. Everyone can access it, see and comment the existing events.
