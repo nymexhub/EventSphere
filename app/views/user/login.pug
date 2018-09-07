@@ -1,0 +1,59 @@
+extends ../_layout
+
+block app-title
+    | Login | EventManagementSystem
+
+block vars
+   - var bodyClass = 'login';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong Login or Register in our system
+                    .description
+                        p If you don't have an account yet, you can register and get access to additional features like personal calendar, event scheduler and many more..
+                .row
+                    .col-sm-6.login-form-wrapper
+                        .form-box
+                            .form-top
+                                .form-top-left
+                                    h3 Login to our site
+                                    p Enter username and password to log on:
+                                    p You dont have an account ?
+                                        a(href="/register" class="btn" id="btn-reg")
+                                            strong REGISTER NOW
+                                .form-top-right
+                                    i.fa.fa-key
+                            .form-bottom
+                                #error-container.alert.alert-danger
+                                    ul
+                                form(role="form" action="" method="post" class="login-form" id="user-login-form")
+                                    .form-group
+                                        label.sr-only(for="form-username") Username
+                                        input(type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username")
+                                        span.error.error-username
+                                    .form-group
+                                        label(class="sr-only" for="form-password") Password
+                                        input(type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password")
+                                        span.error.error-password
+                                    button(type="button" class="btn" id="login-button") Sign in!
+                        .social-login
+                            h3 ...or login with:
+                            .social-login-buttons
+                                a(class="btn btn-link-1 btn-link-1-facebook" href="/auth/facebook")
+                                    i(class="fa fa-facebook")
+                                    | Facebook
+                                a(class="btn btn-link-1 btn-link-1-twitter" href="/auth/twitter")
+                                    i(class="fa fa-twitter")
+                                    | Twitter
+                                a(class="btn btn-link-1 btn-link-1-google-plus" href="/auth/google")
+                                    i(class="fa fa-google-plus")
+                                    | Google Plus
+
+block specificJs
+    script(src="/static/scripts/utils/validator.js")
+    script(src="/static/scripts/users/login.js")

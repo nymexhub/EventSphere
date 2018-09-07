@@ -1,0 +1,31 @@
+{
+  "name": "event-management-system",
+  "description": "Telerik Software Academy - Node.js Apps",
+  "main": "index.js",
+  "authors": [
+    "team-ninjas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/TeamNinjas/EventManagementSystem",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "hover": "Hover#^2.1.0",
+    "animate.css": "^3.5.2",
+    "jquery-backstretch": "backstretch#^2.0.4",
+    "isotope": "^3.0.1",
+    "jqueryui-timepicker-addon": "^1.6.3",
+    "scheduler": "^4.3.1"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1"
+  }
+}

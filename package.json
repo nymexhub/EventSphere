@@ -1,0 +1,52 @@
+{
+  "name": "event-management-system",
+  "version": "1.0.0",
+  "description": "Telerik Software Academy - Node.js Apps",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node app/app.js",
+    "test": "./node_modules/.bin/mocha app/tests/**/*.js",
+    "test-browser": "start chrome http://127.0.0.1:8080/app/tests/index.html && http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamNinjas/EventManagementSystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamNinjas/EventManagementSystem/issues"
+  },
+  "homepage": "https://github.com/TeamNinjas/EventManagementSystem#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "formidable": "^1.0.17",
+    "fs-extra": "^1.0.0",
+    "jquery-ui": "^1.12.1",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.7.0",
+    "mongoose-unique-validator": "^1.0.3",
+    "nodemailer": "^2.6.4",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-plus": "^0.5.1",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.10.2",
+    "http-server": "^0.9.0",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.6"
+  }
+}

@@ -1,0 +1,43 @@
+extends ../_layout
+
+block app-title
+    | Profile | EventManagementSystem
+
+block vars
+   - var bodyClass = 'profile';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong= user.fullName + "'s profile"
+                .row
+                    .col-sm-8.profile-form-wrapper
+                        .form-box
+                            .form-top
+                                .form-top-left
+                                    h3 Here you can change your avatar
+                                    img(src= user.avatarUrl id="profile-avatar")
+                                .form-top-right
+                                   i.fa.fa-pencil
+                            .form-bottom
+
+                                #error-container.alert.alert-danger
+                                    strong The following errors need to be corrected:
+                                    ul
+
+                                form(role="form" enctype="multipart/form-data" action="" method="post" class="profile-form" id="user-profile-form")
+                                    .form-group
+                                        label(class="sr-only" for="form-file") File
+                                        input(type="file"
+                                              multiple="multiple"
+                                              name="file"
+                                              class="form-file form-control"
+                                              id="form-file")
+                                        span.error.error-file
+                                    button(type="button" class="btn" id="upload-button") Upload
+block specificJs
+    script(src="/static/scripts/users/profile-avatar.js")

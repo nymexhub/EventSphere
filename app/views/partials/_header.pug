@@ -1,0 +1,19 @@
+header
+    .navigation-wrapper
+        .container-fluid
+            #logo.col-sm-2
+                a(href="/")
+                    span.fa-stack
+                        i.fa.logo-hex.fa-stack-2x
+                        i.fa.logo-fa.fa-map-marker.fa-stack-2x
+            nav.navbar
+                ul#main-nav.nav.navbar-nav
+                    li.menu-item.hvr-underline-from-center
+                        a(href="/") Home
+                    li.menu-item.hvr-underline-from-center
+                        a(href="/events") Events
+                    li.menu-item.hvr-underline-from-center
+                        a(href="/events/create") Create Event
+                    li.menu-item.hvr-underline-from-center
+                        a(href="/contact") Contact Us
+            block userSection

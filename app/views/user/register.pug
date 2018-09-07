@@ -1,0 +1,85 @@
+extends ../_layout
+
+block app-title
+    | Register | EventManagementSystem
+
+block vars
+   - var bodyClass = 'register';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong Make a new registration
+                    .description
+                        p If you don't have an account yet, you can register and get access to additional features like personal calendar, event scheduler and many more..
+                .row
+                    .col-sm-8.register-form-wrapper
+                        .form-box
+                            .form-top
+                                .form-top-left
+                                    h3 Sign up now
+                                    p Fill in the form below to get instant access:
+                                .form-top-right
+                                   i.fa.fa-pencil
+                            .form-bottom
+
+                                #error-container.alert.alert-danger
+                                    strong The following errors need to be corrected:
+                                    ul
+                                form(role="form" action="" method="post" class="registration-form" id="user-registration-form")
+                                    .form-group
+                                        label(class="sr-only" for="form-username")
+                                        input(type="text"
+                                              name="username"
+                                              placeholder="Username..."
+                                              class="form-username form-control"
+                                              id="form-username")
+                                        span.error.error-username
+                                    .form-group
+                                        label(class="sr-only" for="form-email")
+                                        input(type="text"
+
+                                              name="email"
+                                              placeholder="Email..."
+                                              class="form-email form-control"
+                                              id="form-email")
+                                        span.error.error-email
+                                    .form-group
+                                        label(class="sr-only" for="form-password")
+                                        input(type="password"
+
+                                              name="password"
+                                              placeholder="Password.."
+                                              class="form-password form-control"
+                                              id="form-password")
+                                        span.error.error-password
+                                    .form-group
+                                        label(class="sr-only" for="form-first-name") First name
+                                        input(type="text"
+
+                                              name="firstName"
+                                              placeholder="First name..."
+                                              class="form-first-name form-control"
+                                              id="form-first-name")
+                                        span.error.error-firstname
+                                    .form-group
+                                        label(class="sr-only" for="form-last-name") Last name
+                                        input(type="text"
+
+                                              name="lastName"
+                                              placeholder="Last name..."
+                                              class="form-last-name form-control"
+                                              id="form-last-name")
+                                        span.error.error-lastname
+                                    .form-group
+                                        label(class="sr-only" for="form-age") Age
+                                        input(type="text"  name="age" placeholder="Age..." class="form-age form-control" id="form-age")
+                                        span.error.error-age
+                                    button(type="button" class="btn" id="register-button") Sign me up!
+block specificJs
+    script(src="/static/scripts/utils/validator.js")
+    script(src="/static/scripts/users/register.js")

@@ -1,0 +1,73 @@
+extends ../_layout
+
+block app-title
+    | Profile | EventManagementSystem
+
+block vars
+   - var bodyClass = 'profile';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong= user.fullName + "'s profile"
+                .row
+                    .col-sm-8.profile-form-wrapper
+                        .form-box
+                            .form-top
+                                .form-top-left
+                                    h3 Here you can edit your profile information
+                                    img(src= user.avatarUrl id="profile-avatar")
+                                    div.btn-wrap
+                                        a(class="btn btn-green" href="/profile/avatar") Change your avatar
+                                .form-top-right
+                                    i.fa.fa-pencil
+                            .form-bottom
+
+                                #error-container.alert.alert-danger
+                                    strong The following errors need to be corrected:
+                                    ul
+                                form(role="form" action="" method="post" class="profile-form" id="user-profile-form")
+                                    .form-group
+                                        label(class="" for="form-email") Email
+                                        input(type="text"
+                                              name="email"
+                                              value=user.email
+                                              class="form-email form-control"
+                                              id="form-email")
+                                        span.error.error-email
+                                    .form-group
+                                        label(class="" for="form-first-name") First name
+                                        input(type="text"
+                                              name="firstName"
+                                              value=user.firstName
+                                              class="form-first-name form-control"
+                                              id="form-first-name")
+                                        span.error.error-firstname
+                                    .form-group
+                                        label(class="" for="form-last-name") Last name
+                                        input(type="text"
+                                              name="lastName"
+                                              value=user.lastName
+                                              class="form-last-name form-control"
+                                              id="form-last-name")
+                                        span.error.error-lastname
+                                    .form-group
+                                        label(class="" for="form-age") Age
+                                        input(type="text"
+                                              name="age"
+                                              value=user.age
+                                              class="form-age form-control"
+                                              id="form-age")
+                                        span.error.error-age
+                                    //- .form-group
+                                    //-     label(class="" for="form-password") Enter your password to save changes
+                                    //-     input(type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password")
+                                    //-     span.error.error-password
+                                    button(type="button" class="btn" id="save-profile-button") Save
+block specificJs
+    script(src="/static/scripts/utils/validator.js")
+    script(src="/static/scripts/users/profile.js")

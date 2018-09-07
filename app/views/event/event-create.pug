@@ -1,0 +1,124 @@
+extends ../_layout
+
+block app-title
+    | Create Event | EventManagementSystem
+
+block vars
+   - var bodyClass = 'register page-create-event';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong Event creator
+                    .description
+                        p
+                .row
+                    .col-sm-8.register-form-wrapper
+                        .form-box
+                            .form-top
+                                .form-top-left
+                                    h3 Create your own event
+                                    p Fill in the form below:
+                                .form-top-right
+                                   i.fa.fa-calendar-o
+                            .form-bottom
+
+                                #error-container.alert.alert-warning
+                                    strong The following errors need to be corrected:
+                                    ul
+                                form(role="form" enctype="multipart/form-data" action="" method="post" class="registration-form" id="user-create-form")
+                                    .form-group
+                                        label(class="sr-only" for="form-name")
+                                        input(type="text"
+                                              name="name"
+                                              placeholder="Name..."
+                                              class="form-name form-control"
+                                              id="form-name")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-email")
+                                        select(name="eventType" id="eventType-drop-down" class="form-control")
+                                            option(selected disabled) Choose category
+                                            each eventType in eventTypes
+                                                option(value= eventType.name)= eventType.name
+
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-password")
+                                        select(name="country" id="country-drop-down" class="form-control")
+                                            option(selected disabled) Choose country
+                                            each country in countries
+                                                option(value= country.name)= country.name
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-password")
+                                        select(name="city" id="city-drop-down" class="form-control") |
+                                            option(selected disabled) Choose city
+                                            each city in cities
+                                                option(value= city.name id="city-option" country= city.country.name)= city.name
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-address")
+                                        input(type="text"
+                                              name="address"
+                                              placeholder="Address.."
+                                              class="form-address form-control"
+                                              id="form-address")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-description")
+                                        textarea(type="text"
+                                                 name="description"
+                                                 placeholder="Description..."
+                                                 class="form-description form-control"
+                                                 id= "event-description")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-dateOfEvent")
+                                        input(type="text"
+                                              name="dateOfEvent"
+                                              placeholder="Start date..."
+                                              class="form-dateOfEvent form-control datepicker"
+                                              id="")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-endDateOfEvent")
+                                        input(type="text"
+                                              name="endDateOfEvent"
+                                              placeholder="End date..."
+                                              class="form-dateOfEvent form-control datepicker"
+                                              id="")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-capacity")
+                                        input(type="text"
+                                              name="capacity"
+                                              placeholder="Capacity.."
+                                              class="form-capacity form-control"
+                                              id="form-capacity")
+                                        span.error
+                                    label You can either provide a url or upload an image for the cover of your event
+                                    .form-group
+                                        label(class="sr-only" for="form-coverUrl")
+                                        input(type="text"
+                                              name="coverUrl"
+                                              placeholder="Cover Url.."
+                                              class="form-coverUrl form-control"
+                                              id="form-coverUrl")
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-file") File
+                                        input(type="file"
+                                              multiple="multiple"
+                                              name="file"
+                                              class="form-file form-control"
+                                              id="form-file")
+                                        span.error
+                                    button(type="button" class="btn" id="create-button") Create Event
+block specificJs
+    script(src="/static/scripts/utils/validator.js")
+    script(src="/static/scripts/events/create-event.js")

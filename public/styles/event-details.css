@@ -1,0 +1,133 @@
+.page-event-detail .top-container{
+    background-image: url('/static/media/events_background.jpg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.page-event-detail .inner-bg > .container{
+    padding: 20px;
+    background: rgba(255,255,255, 0.2);
+    border-radius: 3px;
+}
+.page-event-detail .inner-bg > .container > .row{
+    padding: 8% 0 8%;
+}
+.page-event-detail .title h1{
+    color:#fff;
+    text-align: center;
+    text-decoration:underline;
+    margin-bottom:20px;
+    font-family: montserrat-regular;
+}
+.page-event-detail .event-desc{
+    margin: 10px 0 20px;
+}
+.page-event-detail .event-desc h3{
+    font-family: montserrat-regular;
+}
+.event-info .event-cover img{
+    width:100%;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 16px grey;
+}
+.event-info .event-desc p{
+    word-wrap:break-word;
+}
+.page-event-detail #user-nav{
+    margin: 0 20px 0;
+}
+.page-event-detail .subscribe{
+    float: left;
+    padding: 20px 0;
+}
+.page-event-detail .likes-wrapper{
+    float: right;
+    padding:20px 0;
+}
+.page-event-detail .likes-wrapper .btn{
+    float: left;
+    margin-left:15px;
+}
+.page-event-detail .likes-wrapper .btn span{
+    float: left;
+
+}
+.page-event-detail .subscribe button{
+    background: #56daba !important;
+}
+.page-event-detail .additional h3{
+    font-family: montserrat-regular;
+}
+.comments-list{
+    float: left;
+    padding:10px;
+    background-color: rgba(86,218,186, 0.4);
+    border-radius: 5px;
+    width:100%;
+}
+#comments{
+    float: left;
+    position: relative;
+    width:100%;
+    border-radius: 4px;
+
+}
+#comments p{
+    width: 100%;
+    float: left;
+}
+#comment p:last-child{
+    border-bottom:none;
+}
+#comments .author{
+    float: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+#comments .make-comment{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+#comments .make-comment textarea{
+    resize: none;
+    width: 100%;
+    height: 150px;
+    margin: 10px 0 20px;
+}
+#comment-button{
+    margin-top:20px;
+    line-height: 45px;
+    letter-spacing: 0px;
+    height: 45px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+#comment-button:hover{
+    background-color: #56daba !important;
+    color:#fff !important;
+}
+.event-date div{
+    float: left;
+    margin-right:20px;
+}
+.comment-adds{
+    float: left;
+    position:relative;
+    width:100%;
+}
+.comment-adds .author{
+    float: left;
+}
+.comment-adds .dateTime{
+    margin-top: 10px;
+    font-weight: bold;
+    float: right;
+}
+.comment-det{
+    width: 100%;
+    float: left;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}

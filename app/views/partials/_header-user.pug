@@ -1,0 +1,24 @@
+extends _header
+
+block userSection
+    div#user-nav
+        div.user-details
+            div.profile-image
+                a(href="/profile")
+                    img(src= user.avatarUrl id="profile-avatar")
+                div.user-int
+                    span.dropdown-user-menu Hello,
+                        = ' ' + user.fullName
+                    span.socials
+                        div.item(data-toggle="tooltip" title="Profile" data-placement="bottom")
+                            a(href="/profile")
+                                i(class="fa fa-user fa-spin-hover")
+                        div.item(data-toggle="tooltip" title="Calendar" data-placement="bottom")
+                            a(href="/calendar")
+                                i(class="fa fa-calendar fa-fw")
+                        block adminSection
+                        div.item(data-toggle="tooltip" title="Logout" data-placement="bottom")
+                            a(href="/logout")
+                                i(class="fa fa-sign-out fa-fw")
+
+

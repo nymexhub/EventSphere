@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+
+        title
+            block app-title
+        link(rel="stylesheet", href="/static/styles/fonts.css")
+        link(rel="stylesheet", href="/static/bower_components/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/static/bower_components/animate.css/animate.min.css")
+        link(rel="stylesheet", href="/static/styles/main.css")
+        link(rel="stylesheet", href="/static/styles/responsive.css")
+        link(rel="stylesheet", href="/static/styles/login.css")
+        link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        link(rel="stylesheet", href="/static/bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.css")
+        
+        block additionalCss
+
+    block vars
+        - var bodyClass = '';
+    body(class='page-' + bodyClass)
+        if user
+            if isAdmin
+                include partials/_header-admin.pug
+            else
+                include partials/_header-user.pug
+        else
+            include partials/_header.pug
+        #page-loader
+        #content
+            block content
+
+        // include partials/_footer.pug
+        script(src="/static/bower_components/jquery/dist/jquery.min.js")
+        script(src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js")
+        script(src="/static/bower_components/jquery-backstretch/jquery.backstretch.min.js")
+        script(src="/static/scripts/main.js")        
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        script(src="/static/bower_components/jqueryui-timepicker-addon/dist/jquery-ui-timepicker-addon.js")
+        
+        block specificJs

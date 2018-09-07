@@ -1,0 +1,50 @@
+extends ../_layout
+
+block app-title
+    | Approvals | EventManagementSystem
+
+block vars
+   - var bodyClass = 'profile';
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-8.col-sm-offset-2.text
+                    h1
+                        strong Awaiting Events
+                .row
+                    .col-sm-8.profile-form-wrapper
+                        .form-box
+                            .form-top
+                            .form-bottom
+                                if events.length
+                                    ul(id="filter-events" class='awaiting-events')
+                                        each event in events
+                                            li(class='awaiting-event')= ''
+                                                h3=event.name
+                                                div
+                                                    if event.coverUrls[0]
+                                                        img(src= event.coverUrls[0] style={width: '200px', height: '130px'})
+                                                    else
+                                                        img(src= event.coverUrl style={width: '200px', height: '130px'})
+                                                p='Date: ' + event.dateOfEvent.getFullYear() + '/' + (event.dateOfEvent.getMonth() + 1) + '/' + event.dateOfEvent.getDate()
+                                                p='Time: ' + (event.dateOfEvent.getHours()<10?'0':'') + event.dateOfEvent.getHours() + ':' + (event.dateOfEvent.getMinutes()<10?'0':'') + event.dateOfEvent.getMinutes() + 'h'
+                                                p='Description: ' + event.description
+                                                p='Country: ' + event.country.name
+                                                p='City: ' + event.city.name
+                                                p='Address: ' + event.address
+                                                if(event.capacity)
+                                                    p='Capacity: ' +  event.capacity
+                                                else
+                                                    p='Capacity: unlimited'
+                                                p='Author: ' + event.user.name
+
+                                                button(type="button" event-target=event.id class="btn" id="delete-event") Delete
+                                                button(type="button" event-target=event.id class="btn" id="approve-event" style={margin: '5px'}) Approve
+                                else
+                                    h4 There are no events at this time
+
+block specificJs
+    script(src="/static/scripts/users/admin-approvals.js")

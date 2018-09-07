@@ -1,0 +1,115 @@
+extends ../_layout
+
+block app-title
+    | Event | EventManagementSystem
+
+block vars
+   - var bodyClass = 'event-detail';
+
+block additionalCss
+    link(rel="stylesheet", href="/static/styles/event-details.css")
+
+block content
+    .top-container
+        .inner-bg
+            .container
+                .row
+                    .col-sm-12.title
+                        h1= event.name
+                    div(class='event-info' id=event.id)
+                        div.event-cover.col-sm-6
+                            if event.coverUrls[0]
+                                    img(src= event.coverUrls[0])
+                            else
+                                img(src= event.coverUrl)
+
+                            div.options
+                            if user
+                                div.subscribe
+                                    if hasAlreadySubscribed
+                                        button(type="button" class="btn"  id="subscribe-button") Unsubscribe
+                                    else
+                                        button(type="button" class="btn"  id="subscribe-button") Subscribe
+                                div.likes-wrapper
+                                    if isLiked
+                                        a(class='like-btn btn btn-default btn-success')
+                                            span(class='glyphicon glyphicon-thumbs-up')
+                                            span(class='likes')= event.usersWhoLikeThis.length
+                                    else
+                                        a(class='like-btn btn btn-success')
+                                            span(class='glyphicon glyphicon-thumbs-up')
+                                            span(class='likes')= event.usersWhoLikeThis.length
+                                    if isDisliked
+                                        a(class='dislike-btn btn btn-default btn-danger')
+                                            span(class='glyphicon glyphicon-thumbs-down')
+                                            span(class='dislikes')= event.usersWhoDislikeThis.length
+                                    else
+                                        a(class='dislike-btn btn btn-danger')
+                                            span(class='glyphicon glyphicon-thumbs-down')
+                                            span(class='dislikes')= event.usersWhoDislikeThis.length
+
+                        div.event-details-info.col-sm-6
+                            div.event-date
+                                div
+                                    label Start Date:
+                                    p=' ' + event.dateOfEvent.getFullYear() + '/' + (event.dateOfEvent.getMonth() + 1) + '/' + event.dateOfEvent.getDate()
+                                div
+                                    label End Date:
+                                    p=' ' + event.endDateOfEvent.getFullYear() + '/' + (event.endDateOfEvent.getMonth() + 1) + '/' + event.endDateOfEvent.getDate()
+                            div.event-time
+                                div
+                                    label Start Time:
+                                    p=' ' + (event.dateOfEvent.getHours()<10?'0':'') + event.dateOfEvent.getHours() + ':' + (event.dateOfEvent.getMinutes()<10?'0':'') + event.dateOfEvent.getMinutes() + 'h'
+                                div
+                                    label End Time:
+                                    p=' ' + (event.endDateOfEvent.getHours()<10?'0':'') + event.endDateOfEvent.getHours() + ':' + (event.endDateOfEvent.getMinutes()<10?'0':'') + event.endDateOfEvent.getMinutes() + 'h'
+                            div.location
+                                label Location:
+                                div.country=' - Country: ' + event.country.name
+                                div.city=' - City: ' + event.city.name
+                                div.address=' - Address: ' + event.address
+                                div.capacity
+                                    label
+                                    if(event.capacity)
+                                        label Capacity:
+                                        p=' ' +  event.capacity
+                                    else
+                                        label Capacity:
+                                        p=' unlimited'
+                                label Author:
+                                div.author=' ' + event.user.name
+
+
+                        div.additional.col-sm-12
+                            div.event-desc
+                                h3 Description:
+                                p=' ' + event.description
+
+                            h3='Comments'
+                            div.comments-list
+                                if event.comments
+                                    div(id="comments")
+                                        each comment in event.comments
+                                            div.comment-det
+                                                p='' + comment.text
+                                                    div.comment-adds
+                                                        span.author='From: ' + comment.author
+                                                        span.dateTime='On: ' + comment.date.getFullYear() + '/' + (comment.date.getMonth() + 1) + '/' + comment.date.getDate() + ' ' + 'Time: ' + (comment.date.getHours()<10?'0':'') + comment.date.getHours() + ':' + (comment.date.getMinutes()<10?'0':'') + comment.date.getMinutes() + 'h'
+                                else
+                                    div No comments at the moment...
+
+                                div.make-comment
+                                    textarea(type="text"
+                                        name="comment"
+                                        placeholder="Comment.."
+                                        class="form-comment form-control"
+                                        id="comment-textarea")
+                                    span.error
+                                    button(type="button" class="btn-green" id="comment-button") Add Comment
+
+
+block specificJs
+    script(src="/static/scripts/events/comment-event.js")
+    script(src="/static/scripts/events/subscribe-for-event.js")
+    script(src="/static/scripts/utils/validator.js")
+    script(src="/static/scripts/events/rate-event.js")

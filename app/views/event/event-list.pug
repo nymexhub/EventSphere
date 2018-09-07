@@ -1,0 +1,68 @@
+extends ../_layout
+
+block app-title
+    | Events | EventManagementSystem
+
+block vars
+   - var bodyClass = 'events-list inner';
+
+block additionalCss
+    link(rel="stylesheet", href="/static/styles/events-list.css")
+
+block content
+    .top-container
+        .inner-bg
+            .container-fluid
+                div#events-block-it
+                    div.title
+                        h1
+                            |  Discover
+                            strong  Events
+                            |  Easy
+                        i(class="fa fa-diamond fa-2x fa-fw")
+                        p Loop through current event catalogue and find the most suitable events for you...
+
+                    div#search.button-group
+                        form.form-inline(action="/events/search" method="GET")
+                            input.form-control(type="text" placeholder="Country" name="country" value= country)
+                            input.form-control(type="text" placeholder="City" name="city" value= city)
+                            input.form-control(type="text" placeholder= "Name" name="name" value= name)
+                            input.form-control(type="text" id="datepicker" placeholder="Date of event" name="dateOfEvent" value= dateOfEvent)
+                            button.button(class="btn button is-checked" data-filter="*") Search
+                    div#filters.button-group
+                        button.button(class="btn button is-checked" data-filter="*") Show all
+                        each category in events
+                            - var trimmedCatName = category.name.replace(" ", "");
+                            button.button(class="btn button" data-filter='.' + trimmedCatName)= category.name
+                    div#sorts.button-group
+
+                    div.grid
+                        div.grid-sizer
+                        each category in events
+                            - var trimmedCatName = category.name.replace(" ", "");
+
+                            each event in category.events
+                                div(class="element-item " + trimmedCatName data-category=trimmedCatName)
+                                    .overlay
+                                        a(href='/events/' + event.id)
+                                            h2.title= event.name
+                                            div.desc
+                                                p= event.description
+                                            div.date
+                                                strong Date:
+                                                = ' '  + event.dateOfEvent.getFullYear() + '/' + (event.dateOfEvent.getMonth() + 1) + '/' + event.dateOfEvent.getDate()
+                                            div.location
+                                                strong Location:
+                                                = ' ' + event.city.name + ', ' + event.country.name
+                                    a(class='event-link' href='/events/' + event.id)
+                                        if event.coverUrls[0]
+                                            img(src=event.coverUrls[0])
+                                        else
+                                            img(src=event.coverUrl)
+block specificJs
+    script(src="/static/bower_components/isotope/dist/isotope.pkgd.js")
+    script(src="/static/scripts/events/events-list.js")
+
+
+
+
