@@ -1,7 +1,7 @@
 {
-  "name": "event-management-system",
+  "name": "eventilous",
   "version": "1.0.0",
-  "description": "Telerik Software Academy - Node.js Apps",
+  "description": "Aardvark Labs",
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
@@ -11,14 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TeamNinjas/EventManagementSystem.git"
+    "url": "https://github.com/AardvarkLabs/Eventilous.git"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TeamNinjas/EventManagementSystem/issues"
-  },
-  "homepage": "https://github.com/TeamNinjas/EventManagementSystem#readme",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
