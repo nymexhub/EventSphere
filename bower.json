@@ -1,12 +1,11 @@
 {
-  "name": "event-management-system",
-  "description": "Telerik Software Academy - Node.js Apps",
+  "name": "eventilous",
+  "description": "Eventilous",
   "main": "index.js",
   "authors": [
-    "team-ninjas"
+    "Aardvark Labs"
   ],
-  "license": "ISC",
-  "homepage": "https://github.com/TeamNinjas/EventManagementSystem",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
