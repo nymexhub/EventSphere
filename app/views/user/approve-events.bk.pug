@@ -33,7 +33,7 @@ block content
                                                 p='Time: ' + (event.dateOfEvent.getHours()<10?'0':'') + event.dateOfEvent.getHours() + ':' + (event.dateOfEvent.getMinutes()<10?'0':'') + event.dateOfEvent.getMinutes() + 'h'
                                                 p='Description: ' + event.description
                                                 p='Country: ' + event.country.name
-                                             
+                                                p='City: ' + event.city.name 
                                                 p='Address: ' + event.address
                                                 if(event.capacity)
                                                     p='Capacity: ' +  event.capacity
