@@ -3,7 +3,7 @@
 Eventilous OpenSource Project  - v1.00.x
 
 #
-Eventilo.us
+http://www.eventilo.us/
 
 #
 
