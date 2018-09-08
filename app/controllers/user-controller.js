@@ -15,8 +15,8 @@ const settings = {
     port: parseInt(587, 10),
     requiresAuth: true,
     auth: {
-        user: 'eventsys.sup@gmail.com',
-        pass: 'ninjas123456'
+        user: 'f.alfonso.go@gmail.com',
+        pass: 'aadrvark123'
     }
 };
 const transporter = nodemailer.createTransport(settings);

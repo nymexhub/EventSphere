@@ -27,6 +27,7 @@
     "foobar": "^1.1.0",
     "formidable": "^1.0.17",
     "fs-extra": "^1.0.0",
+    "heroku": "^7.14.4",
     "jquery-ui": "^1.12.1",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.13",
