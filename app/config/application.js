@@ -26,12 +26,18 @@ module.exports = function(config){
     app.use(passport.initialize());
     app.use(passport.session());
 
-    app.start = function(){
+
+    // new lines to fix heroku
+    app.use(function(req, res, next){
         if(req.headers['x-forwarded-proto'] === 'https'){
             res.redirect('http://' + req.hostname + req.url);
         } else {
             next();
         }
+    });
+
+    app.start = function(){
+
         const port = config.port;
         app.listen(port, () => console.log(`App running at: http://localhost:${port}`));
     };
