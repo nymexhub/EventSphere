@@ -27,9 +27,42 @@ module.exports = function(config){
     app.use(passport.session());
 
     app.start = function(){
+        if(req.headers['x-forwarded-proto'] === 'https'){
+            res.redirect('http://' + req.hostname + req.url);
+        } else {
+            next();
+        }
         const port = config.port;
         app.listen(port, () => console.log(`App running at: http://localhost:${port}`));
     };
 
     return app;
 };
+
+/*
+
+const PORT = process.env.PORT || 3000;
+
+app.use(function(req, res, next){
+	if(req.headers['x-forwarded-proto'] === 'https'){
+		res.redirect('http://' + req.hostname + req.url);
+	} else {
+		next();
+	}
+});
+
+
+var app = express();
+const PORT = process.env.PORT || 3000;
+
+
+
+app.use(express.static('public'));
+
+app.listen(PORT, function(){
+	console.log('Express server is up on port ' + PORT);
+});
+
+
+
+*/
