@@ -6,6 +6,8 @@ const express = require('express'),
     cookieParser = require('cookie-parser'),
     passport = require('passport'),
     path = require('path');
+    // trying to figure out a way out for the issue in heroku 
+    req = require('req');
 
 /* Setup App */
 module.exports = function(config){
