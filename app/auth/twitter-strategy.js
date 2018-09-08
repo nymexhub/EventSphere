@@ -5,7 +5,8 @@ const TwitterStrategy = require('passport-twitter').Strategy;
 const TWITTER = {
     TWITTER_APP_ID: 'IYE49wNa4MZgmMvApw0Oulj30',
     TWITTER_APP_SECRET: 'gzazRHBZPtIaCBkqWnQZYwb5fCPTKnaDSYu29t02mG3HItRVcq',
-    callbackURL: 'https://events-management-system.herokuapp.com/auth/twitter/callback'
+    /* https://eventilous.herokuapp.com */
+    callbackURL: 'https://eventilous.herokuapp.com/auth/twitter/callback'
 };
 module.exports = function(passport, data) {
 
