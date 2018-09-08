@@ -7,7 +7,7 @@ const express = require('express'),
     passport = require('passport'),
     path = require('path');
     // trying to figure out a way out for the issue in heroku 
- //   req = require('req');
+    // req = require('req');
 
 /* Setup App */
 module.exports = function(config){

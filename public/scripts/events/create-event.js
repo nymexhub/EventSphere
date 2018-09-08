@@ -159,9 +159,8 @@ const MIN_NAME_LENGTH = 3,
                 if (select[0].value !== 'Choose city') {
                     isCityValid = true;
                 } else {
-                    isCityValid = true;
-                    // select.addClass('input-error');
-                    // select.next('span').text('Field is required.');
+                    select.addClass('input-error');
+                    select.next('span').text('Field is required.');
                 }
             }
         });
