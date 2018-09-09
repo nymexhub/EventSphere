@@ -1,6 +1,6 @@
 
 
-Eventilous OpenSource Project  - v1.00.x
+Eventilous OpenSource Project - Alpha - Codename: Vaquerita 2.00.x
 
 #
 http://www.eventilo.us/
