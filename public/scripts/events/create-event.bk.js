@@ -13,9 +13,13 @@ const MIN_NAME_LENGTH = 3,
         $createBtn = $('#create-button'),
         $createFormErrorContainer = $('#error-container'),
         $countryDropDown = $('#country-drop-down'),
+        $cityDropDownOptions = $('#city-drop-down > option'),
         $inputFile = $('#form-file'),
         $descriptionInput = $('#event-description');
 
+    // $cityDropDownOptions.each(function() {
+    //     $(this).hide();
+    // });
 
     $(function() {
         $('.datepicker').each(function () {
@@ -33,14 +37,14 @@ const MIN_NAME_LENGTH = 3,
 
     $countryDropDown.change(function(){
         let country = $(this).val();
-        // $cityDropDownOptions.each(function() {
-        //     if (country !== $(this).attr('country')){
-        //         $(this).hide();
-        //     }
-        //     else{
-        //         $(this).show();
-        //     }
-        // });
+        $cityDropDownOptions.each(function() {
+            if (country !== $(this).attr('country')){
+                $(this).hide();
+            }
+            else{
+                $(this).show();
+            }
+        });
     });
 
     $createBtn.on('click', () => {
@@ -88,7 +92,7 @@ const MIN_NAME_LENGTH = 3,
                         window.location = res.redirectRoute;
                     })
                     .fail((err) => {
-                        // let errorObj = JSON.parse(err.responseText);
+                        let errorObj = JSON.parse(err.responseText);
                         displayValidationErrors(errorObj, $createFormErrorContainer);
                     });
                 })
@@ -119,6 +123,7 @@ const MIN_NAME_LENGTH = 3,
             isNameValid = false,
             isCategoryValid = false,
             isCountryValid = false,
+            // isCityValid = false,
             isDateValid = false,
             isEndDateValid = false,
             isAddressValid = false,
@@ -150,7 +155,14 @@ const MIN_NAME_LENGTH = 3,
                 }
             }
 
-
+            // if (selectName === 'city') {
+            //     if (select[0].value !== 'Choose city') {
+            //         isCityValid = true;
+            //     } else {
+            //         select.addClass('input-error');
+            //         select.next('span').text('Field is required.');
+            //     }
+            // }
         });
 
         $createForm.find('input').each(function(){
@@ -203,7 +215,7 @@ const MIN_NAME_LENGTH = 3,
 
             isDescriptionValid = validator.validateInputString($descriptionInput, true, false, MIN_DESCRIPTION_LENGTH, MAX_DESCRIPTION_LENGTH);
         });
- 
+  // isCategoryValid && isCountryValid && isCityValid &&
         if (isNameValid && isDateValid && isEndDateValid && isAddressValid && isDescriptionValid && isCategoryValid && isCountryValid &&
                 (isCoverUrlValid || (isFileExtensionValid && isFileSizeValid)) ) {
             isFormValid = true;
