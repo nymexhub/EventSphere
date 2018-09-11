@@ -4,6 +4,7 @@ const mongoose = require('mongoose'),
     uniqueValidator = require('mongoose-unique-validator'),
     Schema = mongoose.Schema,
     LETTERS = /[A-Za-z]/;
+    
 
 let CitySchema = new Schema({
     name: {
