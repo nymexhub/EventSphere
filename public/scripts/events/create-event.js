@@ -18,7 +18,7 @@ const MIN_NAME_LENGTH = 3,
         $descriptionInput = $('#event-description');
 
     $cityDropDownOptions.each(function() {
-        $(this).hide();
+        $(this).show();
     });
 
     $(function() {
