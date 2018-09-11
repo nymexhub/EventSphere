@@ -19,7 +19,7 @@ const MIN_NAME_LENGTH = 3,
 
     $cityDropDownOptions.each(function() {
         $(this).show();
-    });
+    }); 
 
     $(function() {
         $('.datepicker').each(function () {
