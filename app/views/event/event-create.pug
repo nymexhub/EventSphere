@@ -49,17 +49,17 @@ block content
                                         span.error
                                     .form-group
                                         label(class="sr-only" for="form-password")
-                                        select(name="country" id="country-drop-down" class="form-control")
-                                            option(selected disabled) Choose country
-                                            each country in countries
-                                                option(value= country.name)= country.name
-                                        span.error
-                                    .form-group
-                                        label(class="sr-only" for="form-password")
                                         select(name="city" id="city-drop-down" class="form-control")
                                             option(selected disabled) Choose city
                                             each city in cities
                                                 option(value= city.name)= city.name
+                                        span.error
+                                    .form-group
+                                        label(class="sr-only" for="form-password")
+                                        select(name="country" id="country-drop-down" class="form-control")
+                                            option(selected disabled) Choose country
+                                            each country in countries
+                                                option(value= country.name)= country.name
                                         span.error
                                     .form-group
                                         label(class="sr-only" for="form-address")
