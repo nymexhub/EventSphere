@@ -1,10 +1,10 @@
 'use strict';
 
-const fs = require('fs'),
-    path = require('path'),
-    express = require('express');
+const   fs = require('fs'),
+        path = require('path'),
+        express = require('express');
 
-const routerFileNamesPattern = '-router.js';
+const   routerFileNamesPattern = '-router.js';
 
 module.exports = function (app, data) {
     // requiring all router files

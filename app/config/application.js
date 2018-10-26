@@ -42,7 +42,7 @@ module.exports = function(config){
     app.start = function(){
 
         const port = config.port;
-        app.listen(port, () => console.log(`App running at: http://localhost:${port}`));
+        app.listen(port, () => console.log(`\nApp running at: http://localhost:${port}\n`));
     };
 
     return app;
