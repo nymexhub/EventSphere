@@ -1,9 +1,9 @@
 
 
-Eventilous OpenSource Project - Alpha - Codename: Vaquerita 2.00.x
+Eventjs OpenSource Project - Alpha - Codename: Vaquerita 2.00.x
 
 #
-http://www.eventilo.us/
+ 
 
 #
 
