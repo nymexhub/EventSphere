@@ -12,4 +12,4 @@ A registered user can also add new events, subscribe to existing ones and like o
 
 #
 
-(C) 2018 by Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch
+By Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch
