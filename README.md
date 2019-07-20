@@ -1,9 +1,6 @@
 
 
-Eventjs - Alpha - Codename: Vaquerita 2.00.x
-
-#
- 
+Eventjs - Codename: Vaquerita 2.00.x
 
 #
 
