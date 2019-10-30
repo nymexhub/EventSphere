@@ -3,7 +3,8 @@
 Eventjs OpenSource Project - Alpha - Codename: Vaquerita 2.00.x
 
 #
- This project open to updatefrom interested individuals.
+ This project open to update from interested individuals.
+
 
 #
 
