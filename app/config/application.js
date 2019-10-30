@@ -1,12 +1,14 @@
 'use strict';
 
-const express = require('express'),
-    bodyParser = require('body-parser'),
-    session = require('express-session'),
-    cookieParser = require('cookie-parser'),
-    passport = require('passport'),
-    path = require('path');
+const   express = require('express'),
+        bodyParser = require('body-parser'),
+        session = require('express-session'),
+        cookieParser = require('cookie-parser'),
+        passport = require('passport'),
+        path = require('path');
     // trying to figure out a way out for the issue in heroku 
+
+    //Felipe can you please state the issue you are having with heroku
     // req = require('req');
 
 /* Setup App */
@@ -71,7 +73,5 @@ app.use(express.static('public'));
 app.listen(PORT, function(){
 	console.log('Express server is up on port ' + PORT);
 });
-
-
 
 */
