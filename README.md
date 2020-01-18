@@ -9,4 +9,4 @@ A registered user can also add new events, subscribe to existing ones and like o
 
 #
 
-By Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch - @felipealfonsog
+By Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch - https://github.com/felipealfonsog
