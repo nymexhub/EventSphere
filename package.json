@@ -28,7 +28,7 @@
     "formidable": "^1.0.17",
     "fs-extra": "^1.0.0",
     "heroku": "^7.14.4",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.0",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.13",
     "mongoose-unique-validator": "^2.0.1",
