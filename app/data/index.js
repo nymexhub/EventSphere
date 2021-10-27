@@ -1,10 +1,10 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
+const   fs = require('fs'),
+        path = require('path');
 
-const modelFileNamesPattern = '-model.js',
-    dataFileNamesPattern = '-data.js';
+const   modelFileNamesPattern = '-model.js',
+        dataFileNamesPattern = '-data.js';
 
 module.exports = function() {
     let models = {};

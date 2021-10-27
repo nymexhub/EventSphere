@@ -16,7 +16,8 @@
     "type": "git",
     "url": "https://github.com/Vollj/Eventilous.git"
   },
-  "author": "",
+  "author": "Felipe Alfonso",
+  "maintainer": "Reuben Antz",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
