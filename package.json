@@ -4,7 +4,7 @@
   "engines": {
     "node": "10.9.0"
   },
-  "description": "Eventilous - Aardvark Labs",
+  "description": "Eventilous - Volljs",
   "main": "app/app.js",
   "scripts": {
     "postinstall": "bower cache clean && bower install",
@@ -14,9 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AardvarkLabs/Eventilous.git"
+    "url": "https://github.com/Vollj/Eventilous.git"
   },
-  "author": "",
+  "author": "Felipe Alfonso",
+  "maintainer": "Reuben Antz",
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.19.0",

@@ -8,8 +8,12 @@ const   express = require('express'),
         path = require('path');
     // trying to figure out a way out for the issue in heroku 
 
+
     //Felipe can you please state the issue you are having with heroku
     // req = require('req');
+
+    // req = require('req'); ===== "I won't advice 'req' to be used considering it's no longer under maintainance so there might be high chances of vulnerability"
+
 
 /* Setup App */
 module.exports = function(config){
@@ -62,11 +66,8 @@ app.use(function(req, res, next){
 	}
 });
 
-
 var app = express();
 const PORT = process.env.PORT || 3000;
-
-
 
 app.use(express.static('public'));
 

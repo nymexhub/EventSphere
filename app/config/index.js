@@ -1,4 +1,5 @@
 'use strict';
+
 let connectionStrings = {
     production: process.env.CONNECTION_STRING,
     development: 'mongodb://localhost/events-db'
