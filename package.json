@@ -41,7 +41,7 @@
     "passport-google-plus": "^0.5.1",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "pug": "^2.0.0-beta6"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "bower": "1.8.8",
