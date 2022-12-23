@@ -1,6 +1,6 @@
 
 
-Eventjs - Codename: Vaquerita 2.00.x
+Eventjs
 
 #
 
