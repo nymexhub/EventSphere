@@ -1,6 +1,5 @@
 
-
-
+EventJS
 
 #
 
@@ -9,14 +8,8 @@ A registered user can also add new events, subscribe to existing ones and like o
 
 #
 
+Developers: 
 
-
-Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch 
+Main and Founder Developer: [Felipe Alfonso Gonzalez](https://glrsrch.com/) - Software Engineer - f.alfonso@res-ear.ch 
 
 [Reuben Azi](https://geekyourselfblog.wordpress.com/) - Software Engineer - [Email](mailto:cheerantz@gmail.com) 
-
-
-(C) 2019 
-=======
-By Felipe Alfonso Gonzalez - Software Engineer - f.alfonso@res-ear.ch - https://github.com/felipealfonsog
-
